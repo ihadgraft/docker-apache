@@ -12,7 +12,7 @@ ENV SERVER_ROOT "/var/apache2"
 ENV DOCUMENT_ROOT_OPTIONS "Indexes FollowSymLinks"
 ENV DOCUMENT_ROOT_ALLOW_OVERRIDE "All"
 ENV DOCUMENT_ROOT_REQUIRE "all granted"
-ENV DIRECTORY_INDEX "index.html index.htm"
+ENV DIRECTORY_INDEX ""
 
 RUN rm -rf /var/www/*
 RUN mkdir -p /etc/optional /run/apache2
