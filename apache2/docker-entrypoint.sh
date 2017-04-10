@@ -2,6 +2,9 @@
 
 if [ ! -z "$PHPFPM_HOST" ] ; then
     mv /etc/optional/php-fpm.conf /etc/apache2/conf.d/php-fpm.conf
+    if ! echo "$DIRECTORY_INDEX" | grep -q '(^| )index\.( |$)' ; then
+        DIRECTORY_INDEX="${DIRECTORY_INDEX} index.php"
+    fi
 fi
 
 if [ ! -d "$DOCUMENT_ROOT" ] ; then
